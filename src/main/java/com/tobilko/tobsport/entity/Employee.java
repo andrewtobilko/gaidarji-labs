@@ -1,5 +1,7 @@
 package com.tobilko.tobsport.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +24,8 @@ public class Employee {
 
     private String name;
     private String positionTitle;
+
+    @JsonSerialize(using = ToStringSerializer.class)
     private LocalDate birthDate;
 
 }
