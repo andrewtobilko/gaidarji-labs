@@ -1,4 +1,4 @@
-package com.tobilko.tobsport;
+package com.tobilko.tobsport.entity;
 
 import lombok.Getter;
 

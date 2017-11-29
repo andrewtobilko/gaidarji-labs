@@ -1,4 +1,4 @@
-package com.tobilko.tobsport;
+package com.tobilko.tobsport.entity;
 
 import lombok.Getter;
 
@@ -17,6 +17,5 @@ public class Department {
     @GeneratedValue
     private Long id;
     private String title;
-    private Employee head;
 
 }
