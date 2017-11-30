@@ -1,5 +1,6 @@
 package com.tobilko.tobsport;
 
+import com.tobilko.tobsport.controller.EmployeeHandler;
 import com.tobilko.tobsport.entity.Employee;
 import com.tobilko.tobsport.repository.EmployeeRepository;
 import org.springframework.boot.ApplicationRunner;
@@ -20,7 +21,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+    //@Bean
     public ApplicationRunner getRunner(EmployeeRepository repository) {
         return args -> {
 
@@ -31,6 +32,11 @@ public class Application {
             }
 
         };
+    }
+
+    @Bean
+    public EmployeeHandler getEmployeeHandler() {
+        return new EmployeeHandler();
     }
 
     private void fillEmployeeRandomly(Employee employee) {
