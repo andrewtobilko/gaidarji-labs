@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>TobSport</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- get -->
+<div class="employees"></div>
+
+<!-- put or post-->
+<div class="edit-employee-block">
+    <div>Id: <input id="edit-employee-id" type="number" min="0"></div>
+    <div>Name: <input id="edit-employee-name" type="text"></div>
+    <div>Position title: <input id="edit-employee-position" type="text"></div>
+    <div>Birthday date:
+        <input id="year" type="number" min="1950" max="2000">
+        <input id="month" type="number" min="1" max="12">
+        <input id="day" type="number" min="1" max="28">
+    </div>
+    <button id="post-employee" onclick="createEmployee()">Create an employee</button>
+    <button id="put-employee" onclick="updateEmployee()">Update an employee by id</button>
+</div>
+
+<!--delete-->
+<div class="delete-employee-block">
+    <div>Id: <input min="0" id="delete-employee-id" type="number"></div>
+    <button id="delete-employee" onclick="deleteEmployee()">Delete an employee by id</button>
+</div>
+
+</body>
+</html>
